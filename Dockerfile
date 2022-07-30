@@ -2,9 +2,9 @@ FROM alpine:3.12.0
 
 LABEL maintainer="SMC Cloud Architect"
 
-ENV NGINX_VERSION 1.16.1
-
 RUN sed -i -e 's/http:/https:/' /etc/apk/repositories
+
+ENV NGINX_VERSION 1.16.1
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && CONFIG="\
@@ -137,8 +137,6 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     # forward request and error logs to docker log collector
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
-   
-RUN apk add --no-cache tzdata
     
 RUN mkdir /usr/share/nginx/html/images \
     && mkdir /usr/share/nginx/html/css
