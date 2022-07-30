@@ -106,7 +106,7 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('cluster');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
@@ -116,7 +116,7 @@
     // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
     // This is using the built-in support of the plain video element, without using hls.js.
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/cluster.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -128,13 +128,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('vodhowto');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/vodhowto.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -298,13 +298,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('supermicroe1l');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Petascale_e1l.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Petascale_e1l.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Petascale_e1l.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Petascale_e1l.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -327,13 +327,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('petascaleVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Petascale.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Petascale.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Petascale.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Petascale.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -356,13 +356,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('storageBayVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_6090bay.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_6090bay.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_6090bay.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_6090bay.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -386,13 +386,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('storageFamilyVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_storageFamily.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_storageFamily.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_storageFamily.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_storageFamily.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -415,13 +415,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('jbofVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/jbof.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/jbof.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/jbof.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/jbof.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -444,13 +444,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('storageReviewVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_storageReview.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_storageReview.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_storageReview.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_storageReview.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -616,13 +616,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('supermicrocdnVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/SupermicroCDN.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -646,13 +646,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('bigtwinVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_BigTwin.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_BigTwin.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Supermicro_BigTwin.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Supermicro_BigTwin.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -676,13 +676,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('hardwaretourVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_HardwareTour.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/BigTwin_HardwareTour.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_HardwareTour.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/BigTwin_HardwareTour.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -706,13 +706,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('arcticVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Arctic_Sound.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Arctic_Sound.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/Arctic_Sound.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/Arctic_Sound.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -736,13 +736,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('bigtwinServerVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_Server.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/BigTwin_Server.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_Server.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/BigTwin_Server.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
@@ -766,13 +766,13 @@
     if (Hls.isSupported()) {
       var video = document.getElementById('bigtwinedsffVideo');
       var hls = new Hls();
-      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_edsff.mp4,.urlset/master.m3u8');
+      hls.loadSource('http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/BigTwin_edsff.mp4,.urlset/master.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, function() {
         video.play();
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = 'http://nginx-vod-app-mwc-vod.apps.compact2.openshift.smc/hls/BigTwin_edsff.mp4,.urlset/master.m3u8';
+      video.src = 'http://nginx-vod-app-mwc-vod.apps.mwc.openshift.smc/hls/BigTwin_edsff.mp4,.urlset/master.m3u8';
       video.addEventListener('canplay', function() {
         video.play();
       });
