@@ -2,8 +2,6 @@ FROM alpine:3.12.0
 
 LABEL maintainer="SMC Cloud Architect"
 
-RUN sed -i -e 's/http:/https:/' /etc/apk/repositories
-
 ENV NGINX_VERSION 1.16.1
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
@@ -72,6 +70,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     && export GNUPGHOME="$(mktemp -d)" \
     && found=''; \
     for server in \
+    hkp://keyserver.ubuntu.com:11371
     ha.pool.sks-keyservers.net \
     hkp://keyserver.ubuntu.com:80 \
     hkp://p80.pool.sks-keyservers.net:80 \
