@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Supermicro Video-on-Demand Demo</title>
+  <link
+    href="data:image/png;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABMLAAATCwAAAAAAAAAAAAAAAAAAAAAAAAAAAABNlgAATZYAAE2WAAdNlgAPTJUADEqUAANLlQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE2WAABNlgAATZYAH0yVAHNJlACxS5UAw02WAL1LlQCcRZEAVTmKABRaoAAADmoAAAAAAAAAAAAAAAAAAE2WAABNlgAATZYAQUuVAM9Vmw3+gbRL/6bLgP+21Jf/rc+K/5TAZ/lwqjPCTZYISABiAAInfQAAAAAAAAAAAABNlgAATZYAKEuVANVopij/x96v//n79//////////////////+/v3/5/Hd/63Pi+tvqjVlAFUAAzSGAQAAAAAATZYAAEuVAIhdoBj/0eS+///////////////////////////////////////8/fv/z+O77Ym5WFHj9cYAK28CAE2WABBKlADFl8Fr//39/P/+/f3//v39//79/f/9/fz//v39//79/f/+/f3//v39//z8+//V5sPOhbVRHJC7YgBLlQAfUZkH2qWxef/Ou7D/zbyv/9HCtv/Sw7f/waub/8Wxov/Itqj/wayc/8m2qP/KuKv/wK+d/HBvsKIgGOItSJMAGVacDtO1vZH/sJOA/8i2qP+5oY//uKCN/7Oah/+vlYD/rI96/6mMd/+4oY7/1si8/6OHe/9WTdj/KCDahkSQAAZTnAqumqRo/7iejv/Itaf/rZF9/6iLdf+1m4j/sJWB/7+qmv+0mof/uaKQ/72nlf+tk4T/dG3b9y0m22dOlgEASpYAZYCeRPzLuaz/7Obh/+nh3P/r5N7/6eHb/+7o4//18u//7ujk/+7o4//n39n/7+nl/+zt99evtNoeTZYAAD6OABdppinE3enO///////////////////////////////////////////////////////3+/O40eq4Ck2WAABQmAgASJMARJC+YeTx9+z////////////////////////////////////////////7/fr+zc+zikIKAAwAAAAASJMAAAA2AABQmAlSmMJs3+jx3v/////////////////////////////////7/fn/3OvNv4V9RzZnLQwRAAAAAAAAAAAwhQAAABIAAEmUBTSAtEqqvdih8eXw2v/1+fH/+Pv1//T58P/j7tf4wNqmtI27XyvA25gAFG0CAAAAAAAAAAAAAAAAAAA1AAA5jgAAJXwACVKZDj15sEJ5lMBnoZ7GdKmaw3CNgLRMUU6UDxB0uSQAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFsAAAAnAAIANAAEAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA+H8AAOAfAADABwAAgAMAAIADAAAAAQAAAAAAAAAAAAAAAAAAgAAAAIAAAADAAAAA4AAAAPADAAD4BwAA/z8AAA=="
+    rel="icon" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    var ref;
+
+    function checkRefresh() {
+      if (document.cookie.split(';').filter(function(item) {
+          return item.indexOf('refresh=1') >= 0
+        }).length) {
+        document.getElementById("check").checked = true;
+        ref = setTimeout(function() {
+          location.reload();
+        }, 1000);
+      }
+    }
+
+    function changeCookie() {
+      if (document.getElementById("check").checked) {
+        document.cookie = "refresh=1";
+        ref = setTimeout(function() {
+          location.reload();
+        }, 1000);
+      } else {
+        document.cookie = "refresh=0";
+        clearTimeout(ref);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar_class">
+    <a class="navbar-brand ms-3" href="https://www.supermicro.com/en/products/nvidia-omniverse?gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQJEe_6S67oNpPcSJ6aRjG_v6WhP-H4e3ECTzIZxqvdKEPDKJ-aUTAQaAgHbEALw_wcB">
+      <img class="logo me" style="width: 100%; max-width: 100px;" alt="SMC Logo"
+        src="images/Super_Micro_Computer_Logo.svg.png" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto me-5">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="intro.html">Introduction</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="howToAccess.html">How To Access</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="useCases.html">Use Cases</a></li>
+      </ul>
+      <form class="d-flex me-5" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <br><br>
+  <center>
+    <h2 id="usecases" class="h2_intro_cases">Use Cases</h2>
+  </center>
+  <div class="news">
+    <ol type="1">
+      <li> Developers may navigate to the Topology tab to review the applications running within each project. In the example below, we are showing how this website is built with OpenShift along with open source tools, including: MinIO, Nginx, and a
+        simple python script.<br>
+        <br>
+        MinIO can be accessed from your web browser by clicking the new window icon shortcut from within the OpenShift Topology tab. Within MinIO, you can create your own Bucket to add your own video or files to support your applications. MinIO runs
+        seamlessly in the public cloud, private cloud and at the edge. MinIO can support a wide range of use cases from AI/ML, analytics, backup/restore, to modern web and mobile apps. To learn more, please visit <a
+          href='https://min.io/'>min.io</a>.<br>
+      </li>
+      <ul class="news" style="color: red;padding: 20px; margin-left: 35px;width: 90%;">
+        <li>Admins can clean out data once user access has been terminated.</li>
+        <li>This version of MinIO is not supported by Red Hat, and is strictly for demonstration purposes. MinIO Operator integrates natively on OpenShift with admin-only access.</li>
+        <!--li>Supermicro is not be responsible for any loss of data. Please backup your files ahead of time.</li-->
+      </ul>
+      <center><img alt="OCP" src="images/OCP-Topology.png" width="1000">Figure 3: OpenShift Topology</center><br>
+      <center><img alt="MinIO" src="images/MinIO-Browser-m.png" width="1000">Figure 4: MinIO Browser Running in a container on OpenShift</center><br>
+      <li>Here is how MinIO is being used to support Video-On-Demand on this website.
+        <ul class="news" style="padding: 20px; margin-left: 35px;width: 90%;">
+          <li>This VOD container can be used by other cloud-native applications to support desktop & mobile applications.</li>
+        </ul>
+      <li> To review the cluster hardware resources, SuperCloud Composer can give you a high level overview on the Dashboard tab. </li>
+      <center><img alt="SCC" src="images/SCC-1.png" width="900">Figure 5: SuperCloud Composer Dashboard</center><br>
+      <li> To review the compute list, please click the Compute icon on the navigation menu, located on the left-hand side.</li>
+      <center><img alt="SCC" src="images/SCC-2.png" width="900">Figure 6: SuperCloud Composer Compute list</center><br>
+      <li> To review the network topology, please click the Topology icon on the navigation menu, located on the left-hand side. </li>
+      <center><img alt="SCC" src="images/SCC-3.png" width="900">Figure 7: SuperCloud Composer Network Topology</center><br>
+  </div>
+  <br><br><br>
+  <div id="footer">
+    <div id="center" align="center">
+      &copy; SuperMicro Computer, Inc. 2022
+    </div>
+  </div>
+</body>
+
+</html>
