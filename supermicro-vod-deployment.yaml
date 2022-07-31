@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supermicro-video-on-demand1
+  labels:
+    app: supermicro-video-on-demand1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supermicro-video-on-demand1
+  template:
+    metadata:
+      labels:
+        app: supermicro-video-on-demand1
+    spec:
+      containers:
+      - name: supermicro-video-on-demand1
+        image: quay.io/emiliog1/openshift-nginx-hello@sha256:da91b63a6168abff0c461c7011e98d30ed31245a137a13787afdac5d8b2f0bda
+        ports:
+        - containerPort: 8080
