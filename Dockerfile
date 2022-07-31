@@ -63,12 +63,13 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
     zlib-dev \
     linux-headers \
     curl \
-    gnupg1 \
+    gnupg \
     libxslt-dev \
     gd-dev \
     geoip-dev \
-    && curl -fSL https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx.tar.gz \
-    && curl -fSL https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz.asc  -o nginx.tar.gz.asc \
+    perl-dev \
+    && curl -fSL http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx.tar.gz \
+    && curl -fSL http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz.asc  -o nginx.tar.gz.asc \
     && export GNUPGHOME="$(mktemp -d)" \
     && found=''; \
     for server in \
@@ -180,7 +181,7 @@ RUN apk --no-cache add shadow \
     && chmod -R g+w /var/cache/nginx \
     && apk del shadow
 
-EXPOSE 8080
+EXPOSE 8080 80 443
 
 STOPSIGNAL SIGTERM
 
