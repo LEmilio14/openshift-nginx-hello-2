@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: supermicro-video-on-demand1
-        image: quay.io/emiliog1/openshift-nginx-hello@sha256:584e0d0dc18301e808fab9044ebad6c3d8655285a098bda4c5a1218e0ae03ff7
+        image: quay.io/emiliog1/openshift-nginx-hello@sha256:f413ca63aa94bd6c79c4664c38e4caf572c0670869870bdefaf6d33919719662
         ports:
         - containerPort: 8080
