@@ -165,7 +165,7 @@
   
                 <!-- Supermicro E.1L picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card storage_card">
                     <img src="images/Supermicroe1L.png" class="card-img-top" alt="petascale">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Supermicro E.1L</h4>
@@ -180,7 +180,7 @@
   
                 <!-- Supermicro Petascale picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card storage_card">
                     <img src="images/Petascale.png" class="card-img-top" alt="petascale">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Petascale Storage EDSFF</h4>
@@ -195,7 +195,7 @@
                 
                 <!-- Storage 60 90 Bay picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card storage_card">
                     <img src="images/Supermicro_60_90_bay.png" class="card-img-top" alt="JBOD">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">60-Bay & 90-Bay Storage</h4>
@@ -219,7 +219,7 @@
   
                 <!-- Loading Storage Family picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card storage_card">
                     <img src="images/Top_loading_lineup.png" class="card-img-top" alt="storage family">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Loading Storage Family</h4>
@@ -234,7 +234,7 @@
   
                 <!-- JBOF picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card storage_card">
                     <img src="images/jbof.png" class="card-img-top" alt="jbof">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Disaggregated Storage JBOF</h4>
@@ -249,7 +249,7 @@
   
                 <!-- Storage Review picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card storage_card">
                     <img src="images/storagereview_36bay.png" class="card-img-top" alt="36-bay">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Supermicro Storage Review</h4>
@@ -483,7 +483,7 @@
 
                 <!-- Supermicro CDN picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card twin_cards">
                     <img src="images/image2.PNG" class="card-img-top" alt="CDN">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Supermicro CDN</h4>
@@ -498,7 +498,7 @@
 
                 <!-- Supermicro BigTwin picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card twin_cards">
                     <img src="images/bigTwin_image.PNG" class="card-img-top" alt="BigTwin">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Supermicro BigTwin</h4>
@@ -513,7 +513,7 @@
                 
                 <!-- Arctic Sound picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card twin_cards">
                     <img src="images/image3.PNG" class="card-img-top" alt="Arctic Sound">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">Arctic Sound-M</h4>
@@ -537,7 +537,7 @@
 
                 <!-- BigTwin tour picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card twin_cards">
                     <img src="images/hardware_tour.PNG" class="card-img-top" alt="BigTwin Hardware Tour">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">BigTwin Hardware Tour</h4>
@@ -552,7 +552,7 @@
 
                 <!-- BigTwin Server picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card twin_cards">
                     <img src="images/BigTwin_Server.PNG" class="card-img-top" alt="BigTwin Server">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">X12 BigTwin Server</h4>
@@ -567,7 +567,7 @@
 
                 <!-- BigTwin EDSFF picture and button -->
                 <div class="col-lg-4 col-sm-4">
-                  <div class="card">
+                  <div class="card twin_cards">
                     <img src="images/BigTwin_edsff.PNG" class="card-img-top" alt="BigTwin EDSFF">
                     <div class="card-body">
                       <h4 style="text-align: center;" class="card-title">BigTwin EDSFF</h4>
@@ -781,31 +781,66 @@
 
 <script>
   function search_video() {
-    // Declare variables
-    var input, filter, a, i, txtValue, startVideo, carousel_element;
+    var count, input, filter, h, i, txtValue, startVideo, carousel_element, family_titles = [];
+    var flag_storage, flag_twin;
     startVideo = document.getElementById('startVideo');
     startVideo.style.display = 'none';
-    // startVideo.hidden = true;
+
     input = document.getElementById('searchbar');
-    filter = input.value.toUpperCase();
+    filter = input.value.toUpperCase();  // Users input in uppercase.
+    carousels = document.getElementsByClassName("lineup_carousel");
+    storage_cards = document.getElementsByClassName("storage_card");
+    twin_cards = document.getElementsByClassName("twin_cards");
     cards = document.getElementsByClassName("card");
-    // li = modal.getElementById .getElementsByTagName('li');
+    
     for (i = 0; i < cards.length; i++) {
       cards[i].hidden = false;
     }
+
+    for (j = 0; j < carousels; j++){
+      carousels[j].hidden = false;
+    }
+
+    family_titles.push(carousels[0].getElementsByTagName("h2")[0]);
+    family_titles.push(carousels[1].getElementsByTagName("h2")[0]);
+
+    for(k = 0; k < family_titles.length; k++){
+      txt = family_titles[k].textContent || family_titles[k].innerText;
+      if (filter === txt.toUpperCase()){
+        if (k === 0){
+          carousels[1].hidden = true;
+          for (i = 0; i < cards.length; i++) {
+            storage_cards[i].hidden = false;
+          }
+        } else {
+          carousels[0].hidden = true;
+          for (i = 0; i < cards.length; i++) {
+            twin_cards[i].hidden = false;
+          }
+        }
+      }
+    }
+
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < cards.length; i++) {
-      a = cards[i].getElementsByTagName("h4")[0];
-      txtValue = a.textContent || a.innerText;
+      h = cards[i].getElementsByTagName("h4")[0];
+      txtValue = h.textContent || h.innerText;
+      
+
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         cards[i].style.display = "";
       } else {
         cards[i].hidden = true;
-        // carousel_element.innerHTML = cards[i];
-        // cards[i].style.display = "inline-block";
       }
     }
+
+    if(filter === ""){
+      startVideo.style.display = 'block';
+      carousels[0].hidden = false;
+      carousels[1].hidden = false;
+    }
   }
+
   </script>
 
 
